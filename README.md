@@ -4,9 +4,9 @@ Symfony3 solution for a website selling online books
 a user may deposit an ad and consulet books online.
 university project in advanced web subject.
 
-\n "book" folder  contains the booksBundle app folder views located in app/views.
-\n "booksBundle" folder contains the symfony bundle .
-\n add "new booksBundle\booksBundle()," to AppKernel.php.
+ "book" folder  contains the booksBundle app folder views located in app/views  ........... .
+"booksBundle" folder contains the symfony bundle ........... .
+add "new booksBundle\booksBundle()," to AppKernel.php.
 
 
 ![capture backend](https://cloud.githubusercontent.com/assets/24205064/21744172/18f2c6b4-d511-11e6-819f-86319719a7b6.PNG)
