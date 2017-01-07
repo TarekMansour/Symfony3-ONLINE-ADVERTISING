@@ -2,3 +2,4 @@
 "booksBundle" folder contains the symfony bundle .
 add "new booksBundle\booksBundle()," to AppKernel.php.
 
+![capture backend - copy](https://cloud.githubusercontent.com/assets/24205064/21744079/b006cf84-d50f-11e6-8272-c8e53b2b0d86.PNG)
