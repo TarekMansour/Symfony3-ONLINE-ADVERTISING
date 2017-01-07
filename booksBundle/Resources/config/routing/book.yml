@@ -1,0 +1,29 @@
+annonce_books_index:
+    path:     /
+    defaults: { _controller: "booksBundle:book:index" }
+    methods:  GET
+
+annonce_books_show:
+    path:     /{id}/show
+    defaults: { _controller: "booksBundle:book:show" }
+    methods:  GET
+
+annonce_books_new:
+    path:     /new
+    defaults: { _controller: "booksBundle:book:new" }
+    methods:  [GET, POST]
+
+annonce_books_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "booksBundle:book:edit" }
+    methods:  [GET, POST]
+
+annonce_books_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "booksBundle:book:delete" }
+    methods:  delete
+
+annonce_books_dashboard:
+    path:     /dashboard
+    defaults: { _controller: "booksBundle:book:dashboard" }
+    methods:  GET

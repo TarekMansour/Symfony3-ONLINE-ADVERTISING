@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+{% block title %}Books List{% endblock %}
+{% block body %}
+    <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="{{ path('annonce_books_dashboard')}}"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+                <li class="active">books list section</li>
+            </ol>
+        </div><!--/.row-->
+
+    <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"> Books List</h1>
+            </div>
+        </div><!--/.row-->
+
+    <div class="table-responsive">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for book in books %}
+            <tr>
+                <td><a href="{{ path('annonce_books_show', { 'id': book.id }) }}">{{ book.id }}</a></td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.description }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.price }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('annonce_books_show', { 'id': book.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('annonce_books_edit', { 'id': book.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+                <!--<td>
+                    <div class="ratings">
+                        <p class="pull-right">5 reviews</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                        </p>
+                </td>-->
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+    <ul>
+        <li>
+            <a href="{{ path('annonce_books_new') }}">Create a new book</a>
+        </li>
+    </ul>
+{% endblock %}

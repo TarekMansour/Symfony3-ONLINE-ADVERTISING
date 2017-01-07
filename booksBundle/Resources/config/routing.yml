@@ -1,0 +1,24 @@
+books_annonce_books:
+    resource: "@booksBundle/Resources/config/routing/book.yml"
+    prefix:   /annonce/admin/books
+    
+books_homepage:
+    path:     /
+    defaults: { _controller: booksBundle:Default:index }
+
+books_logpage:
+    path:     /login
+    defaults: { _controller: booksBundle:Default:login }
+
+frontEnd_catalogue:
+    path:     /annonce/catalogueList
+    defaults: { _controller: booksBundle:FrontEnd:catalogue }
+
+frontEnd_searchBooks:
+    path:     /annonce/searchBooks
+    defaults: { _controller: booksBundle:FrontEnd:search }
+
+frontEnd_annonce:
+    path:     /annonce/addanad
+    defaults: { _controller: booksBundle:Ad:add }
+

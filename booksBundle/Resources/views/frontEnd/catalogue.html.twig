@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block title %}Online advertising{% endblock %}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ asset ('frontEndTemplate/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{{ asset ('frontEndTemplate/css/freelancer.min.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{ asset ('frontEndTemplate/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="{{ path('frontEnd_searchBooks')}}">Online advertising</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                   	<li >
+                        <a href="{{ path('frontEnd_searchBooks')}}">Home</a>
+                    </li>
+                     <li >
+                        <a href="{{ path('frontEnd_catalogue')}}">Books List</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="{{ asset ('frontEndTemplate/img/search1.png') }}" alt="">
+                    <div class="intro-text">
+                        <h3>Book Search Result</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                {% block body %}
+                    <div class="row">
+                <div class="col-sm-3 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{ asset ('uploads/books/Morning Star.jpg') }}" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-3 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{ asset ('uploads/books/A Court of Mist and Fury.jpg') }}" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-3 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{ asset ('uploads/books/Lady Midnight.jpg') }}" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-3 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{ asset ('uploads/books/Heartless.jpg') }}" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-3 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{ asset ('uploads/books/Stars Above.jpg') }}" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-3 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{ asset ('uploads/books/Blood Line.jpg') }}" class="img-responsive" alt="">
+                        
+                    </a>
+                </div>
+
+                
+            </div>
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>Monastir
+                            <br>5010 Ouerdanine</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/profile.php?id=100009954669444" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/u/0/" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/mansourtarek3?lang=fr" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/tarek-mansour-a9a568123?trk=nav_responsive_tab_profile_pic" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About Admin</h3>
+                        <p>MASNOUR Tarek  <br>{ think big  start small  scale fast... }</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Online advertising Website 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Morning Star</h2>
+                            <hr class="star-primary">
+                            <img src="{{ asset ('uploads/books/Morning Star.jpg') }}" class="img-responsive img-centered" alt="">
+                            <p>
+                                Morning Star is a 2016 science fiction novel by American author Pierce Brown, the third in his Red Rising trilogy. Morning Star picks up as lowborn Darrow escapes capture and resumes his campaign against the tyrannical Sovereign of the Society. Betrayed by his old friend Roque au Fabii, Darrow has witnessed the murders of his friends and suffered a year of torture and imprisonment. Now a shadow of his former self, he rejoins the rebellion he ignited, which has faltered since his presumed death. Darrow's secret origin as a Red is now widely known, which has emboldened the lowColors but also galvanized the Golds against him. Pragmatic as ever, he begins to amass the resources and allies he needs to defeat the forces of the Sovereign.
+                            </p>
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>A Court of Mist and Fury</h2>
+                            <hr class="star-primary">
+                            <img src="{{ asset ('uploads/books/A Court of Mist and Fury.jpg') }}" class="img-responsive img-centered" alt="">
+                            <p>
+                                Sarah J. Maas’ A Court of Mist and Fury is one of the hottest books of the season (and we’re not just talking about those delicious, steamy scenes). Maas takes readers to the Night Court, where Feyre learns to adapt to her new life as a fae, while battling her inner demons. It’s an unforgettable story with an ending that readers are sure to be theorizing about until they can get their hands on book three. We had quite a few questions ourselves about the fate of our favorite characters (Rhys, Cassian, and Nesta to name a few). Here, Maas hints at what readers can expect from the next book and gives a behind-the-scenes look at what helped to inspire A Court of Mist and Fury.
+                            </p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Lady Midnight</h2>
+                            <hr class="star-primary">
+                            <img src="{{ asset ('uploads/books/Lady Midnight.jpg') }}" class="img-responsive img-centered" alt="">
+                            <p>
+                                The Shadowhunters of Los Angeles star in the first novel in Cassandra Clare’s newest series, The Dark Artifices, a sequel to the internationally bestselling Mortal Instruments series. Lady Midnight is a Shadowhunters novel.
+
+                                It’s been five years since the events of City of Heavenly Fire that brought the Shadowhunters to the brink of oblivion. Emma Carstairs is no longer a child in mourning, but a young woman bent on discovering what killed her parents and avenging her losses.
+
+                                Together with her parabatai Julian Blackthorn, Emma must learn to trust her head and her heart as she investigates a demonic plot that stretches across Los Angeles, from the Sunset Strip to the enchanted sea that pounds the beaches of Santa Monica. If only her heart didn’t lead her in treacherous directions…... 
+
+                            </p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Heartless</h2>
+                            <hr class="star-primary">
+                            <img src="{{ asset ('uploads/books/Heartless.jpg') }}" class="img-responsive img-centered" alt="">
+                            <p>
+                                Catherine may be one of the most desired girls in Wonderland and a favorite of the unmarried King, but her interests lie elsewhere. A talented baker, she wants to open a shop and create delectable pastries. But for her mother, such a goal is unthinkable for a woman who could be a queen.
+                            </p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Stars Above</h2>
+                            <hr class="star-primary">
+                            <img src="{{ asset ('uploads/books/Stars Above.jpg') }}" class="img-responsive img-centered" alt="">
+                            <p>
+                                The universe of the Lunar Chronicles holds stories—and secrets—that are wondrous, vicious, and romantic. How did Cinder first arrive in New Beijing? How did the brooding soldier Wolf transform from young man to killer? When did Princess Winter and the palace guard Jacin realize their destinies?
+
+                                With nine stories—five of which have never before been published—and an exclusive never-before-seen excerpt from Marissa Meyer’s upcoming novel, Heartless, about the Queen of Hearts from Alice in Wonderland, Stars Above is essential for fans of the bestselling and beloved Lunar Chronicles.
+
+                            </p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Blood Line</h2>
+                            <hr class="star-primary">
+                            <img src="{{ asset ('uploads/books/Blood Line.jpg') }}" class="img-responsive img-centered" alt="">
+                            <p>
+                                Bloodlines is the first book in the spin-off series of the Vampire Academy series by American author Richelle Mead. It follows the story of narrator Sydney Sage, the alchemist who helped Rose in Blood Promise, Spirit Bound and Last Sacrifice.
+                            </p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- jQuery -->
+    <script src="{{ asset ('frontEndTemplate/vendor/jquery/jquery.min.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ asset ('frontEndTemplate/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{{ asset ('frontEndTemplate/js/jqBootstrapValidation.js')}}"></script>
+    <script src="{{ asset ('frontEndTemplate/js/contact_me.js')}}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{{ asset ('frontEndTemplate/js/freelancer.min.js')}}"></script>
+
+</body>
+
+</html>
+
