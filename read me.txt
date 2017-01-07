@@ -1,5 +1,0 @@
-"book" folder  contains the booksBundle app folder views located in app/views.
-"booksBundle" folder contains the symfony bundle .
-add "new booksBundle\booksBundle()," to AppKernel.php.
-
-![capture backend](https://cloud.githubusercontent.com/assets/24205064/21744114/3ef74b10-d510-11e6-9618-0b14b7634be1.PNG)
